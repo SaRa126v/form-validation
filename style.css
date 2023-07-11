@@ -1,0 +1,136 @@
+body {
+  margin: 0;
+  background-image: linear-gradient(to right, #62cff4, #2c67f2);
+}
+
+#container {
+  margin: 5% auto;
+  width: 250px;
+  min-height: 400px;
+  background-color: rgba(240, 248, 255, 0.789);
+  border: 2px solid rgb(255, 250, 250);
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  color: #02216a;
+}
+
+form {
+margin-top: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wrapper {
+  width: 90%;
+  margin-bottom: 20px;
+}
+
+/* transition doesnt work for fieldset********** */
+/* borders add unneccessery width ************* */
+
+fieldset {
+  padding: 0;
+  margin: 0;
+
+  background-color: #e3eeff;
+  border-radius: 5px;
+  border: none;
+  min-height: 40px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  overflow: hidden;
+}
+
+.hoverInput:hover {
+  border-bottom: 1.5px solid #b397d0 ; 
+}
+
+.activeInput {
+  border: 1.5px solid #b397d0 ; 
+  /* padding: 0; */
+}
+
+legend {
+  display: none;
+  animation: size 0.5s forwards;
+  font-size: 0.85rem;
+  color: #7a599f ;
+}
+
+@keyframes size {
+  from {font-size: .81rem;}
+  to {font-size: 0.75rem;}
+}
+
+
+input {
+  caret-color: #735e89;
+  border: none;
+  outline: none;
+  background-color: #e3eeff;
+  min-width: 70%;
+  color: #191c24;
+
+  padding-top: 10px ;
+  padding-bottom: 10px ;
+}
+
+input:nth-of-type(1),
+input:nth-of-type(2) {
+ width: 100%;
+}
+
+input::placeholder {
+  font-size: 0.65rem;
+  color: #0a2e838d;
+}
+
+svg {
+  fill: #0a2e838d;
+  transition: fill 0.25s;
+}
+
+.secondSvg:hover {
+  fill:#735e89 ;
+  cursor: pointer;
+}
+
+button {
+  margin-top: 10px;
+  background-color: #b397d0;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  width: 90%;
+  min-height: 40px;
+  transition: box-shadow 0.25s;
+}
+button:hover {
+  box-shadow: 1px 2px 3px #735e89;
+}
+
+.warning {
+  background-color: #ff9800;
+}
+.error {
+  background-color: #f44336;
+}
+.success {
+  background-color: #04aa6d;
+}
+
