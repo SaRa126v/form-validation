@@ -92,11 +92,7 @@ function emailChecker() {
   let emailMessege;
 
   // if it is valid by using Regex (regular expressions)
-  if (emailValue.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
-    success(email, emailMessege);
-
-    // if it is empty
-  } else if (emailValue == "") {
+  if (emailValue == "") {
     // messege for empty email field
     emailMessege = "Oops! Looks like you missed a field.";
 
@@ -104,6 +100,10 @@ function emailChecker() {
     error(email, emailMessege);
 
     // invalid email
+  } else if (emailValue.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
+    success(email, emailMessege);
+
+    // if it is empty
   } else {
     emailMessege = "Hmmm, something's not quite right with that email address.";
 
